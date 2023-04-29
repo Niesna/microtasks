@@ -25,7 +25,15 @@ function App() {
         {manufacturer:'Mercedes', model:'e63s'},
         {manufacturer:'Audi', model:'rs6'}
     ]
-
+// const myFirstSubscriber = (event:React.MouseEvent<HTMLButtonElement>)=>{
+//     console.log("Hello, I am Vasya!")
+// }
+// const mySecondSuscriber=(event:React.MouseEvent<HTMLButtonElement>)=>{
+// //         console.log("Hello, I am Ivan!")
+// }
+const onClickHandler =(name:string) => {
+    console.log(name)
+}
     return (
         <>
            {/*<Header title={"NEW BODY"}/>*/}
@@ -33,6 +41,9 @@ function App() {
            {/* <Footer titleForFooter={"New Footer"}/>*/}
            {/* <NewComponent students={students}/>*/}
            {/* <NewCar topCars={topCars}/>*/}
+           {/* <button onClick={(event)=>{console.log("Hello")}}>MyYoutubeChanel-1</button>*/}
+            <button onClick={onClickHandler("Vasya")}>MyYoutubeChanel-1</button>
+            <button onClick={onClickHandler ("Ivan")}>MyYoutubeChanel-2</button>
         </>
     );
 }
